@@ -15,6 +15,16 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 6
+function eightOrHigher() {
+    let count = 0;
+    for (let i = 0; i < grades.length; i++) {
+        if (grades[i] >= 8) {
+            count++;
+        }
+    } return count;
+}
+let totalAmount = eightOrHigher();
+console.log(totalAmount);
 
 
 /*  1b: Omschrijven tot een herbruikbare functie   */
@@ -27,8 +37,18 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // cumLaude([6, 4, 5]) geeft 0
 // cumLaude([8, 9, 4, 6, 10]) geeft 3
 
+function cumLaude (arr) {
+    let count = 0;
+    for (let i = 0; i < arr.length; i ++) {
+        if (arr[i] >= 8) {
+            count++
+        }
+    }
+    return count;
+}
 
-
+let amountOfCumLaude = cumLaude(grades);
+console.log(amountOfCumLaude);
 
 /* Opdracht  2: Gemiddeld cijfer */
 
@@ -42,6 +62,17 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 
 // ---- Verwachte uitkomst: 6.642857142857143
 
+function averageGrade () {
+    let count = 0;
+    for (let i = 0; i < grades.length; i++) {
+        count += grades[i];
+    }
+    let average = count / grades.length;
+    return average;
+}
+
+console.log(averageGrade(grades));
+
 
 /* 2b: Omschrijven tot een herbruikbare functie */
 // Schrijf een functie genaamd averageGrade, die een array van cijfers verwacht (zoals grades) en het gemiddelde cijfer teruggeeft. Gebruik hiervoor jouw antwoord van 2a.
@@ -53,15 +84,29 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // averageGrade([6, 4, 5]) geeft xxxx
 // averageGrade([8, 9, 4, 6, 10]) geeft xxxx
 
+function averageGrade1 (number) {
+    let count = 0;
+    for (let i = 0; i < number.length; i++) {
+        count += number[i];
+    }
+    let average = count / number.length;
+    return average.toFixed(2);
+}
+
+console.log(averageGrade1(grades));
+
+
 
 /* 2c: Afronden op twee decimalen */
 // Zorg ervoor dat het gemiddelde cijfer dat wordt teruggegeven uit de functie netjes wordt afgerond op twee decimalen.
 // Tip: Google is your best friend!
 
-
+// zie 2a (2 vliegen in 1 klap)
 
 
 /* Bonusopdracht: hoogste cijfer */
+
+//GEDAAN!!!!!
 
 /* 3a: Script schrijven  */
 // Schrijf een script die op basis van de grades array (hierboven) checkt wat het hoogst behaalde cijfer is. Je mag hier geen bestaande methoden voor gebruiken. Schrijf de stapjes eerst uit en vraag jezelf de volgende dingen af:
@@ -71,6 +116,20 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // Log het antwoord in de terminal.
 
 // ---- Verwachte uitkomst: 9
+
+function highestGrade () {
+    let count = 0;
+    for (let i = 0; i <grades.length; i++) {
+        if (grades[i] > count) {
+            count = grades[i];
+        }
+    }
+    return count;
+}
+
+console.log(highestGrade());
+
+
 
 
 /* 3b: Omschrijven tot een herbruikbare functie */
@@ -82,3 +141,15 @@ const grades = [9, 8, 5, 7, 7, 4, 9, 8, 8, 3, 6, 8, 5, 6];
 // highestGrade(grades) geeft 9
 // highestGrade([6, 4, 5]) geeft 6
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
+
+function highestGrade1 (arr) {
+    let count = 0;
+    for (let i = 0; i <arr.length; i++) {
+        if (arr[i] > count) {
+            count = arr[i];
+        }
+    }
+    return count;
+}
+
+console.log(highestGrade1([6,4,9,8,100]));
