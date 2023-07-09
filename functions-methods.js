@@ -16,7 +16,7 @@ function getEmailDomain (emailadres) {
     return email;
 }
 let domain = getEmailDomain("t.mellink@novi.nl");
-console.log(domain)
+console.log(domain);
 
 
 /* Opdracht  2 */
@@ -47,7 +47,7 @@ function typeOfEmail (emailadres) {
 }
 
 let role = typeOfEmail('sdfsfsdfsdfsdf');
-console.log(role)
+console.log(role);
 
 /* Opdracht  3 */
 // Schrijf een functie genaamd checkEmailValidity, die een emailadres verwacht en checkt of het emailadres valide is. De functie returned true of false, afhankelijk van de uitkomst.
@@ -65,9 +65,9 @@ console.log(role)
 function checkEmailValidity(email) {
 
     if (email.includes('@') === true && email.includes(',') != true && !/[.]$/.test(email)) {
-        return true
+        return true;
     } else {
-        return false
+        return false;
     }
 }
 
